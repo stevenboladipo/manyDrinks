@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery Wizadry</title>
+</head>
+
+<body>
+<h1>Can I buy you a drink?</h1>
+
+<div id="drinkOptions"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+var drinkList = [
+	'Coffee: $5',
+	'Espresso: $7',
+	'Capuccino: $6',
+	'Latte: $4',
+	'Tea: $3',
+	'Ice Coffee: $6',
+	'Ice Espresso: $8',
+	'Ice Latte: $6',
+	'Ice Tea: $4',
+	];
+var drinkDiv = $('#drinkOptions');
+// var drinkDiv = document.getElementById("drinkOptions");
+for (var i = 0; i < drinkList.length; i++){
+var newDrinDiv = $('<div>' + drinkList[i] + '</div>')
+// 		var newDrinDiv = document.createElement("div");
+
+// 		newDrinDiv.innerHTML = drinkList[i];
+
+// 		drinkDiv.appendChild(newDrinDiv)
+drinkDiv.append(newDrinDiv);
+}
+</script>
+</body>
+</html>
